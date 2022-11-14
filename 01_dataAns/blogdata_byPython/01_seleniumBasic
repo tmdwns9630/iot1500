@@ -1,0 +1,10 @@
+#셀레니움 기초
+
+from selenium import webdriver 
+
+path = "c:/iot1500/chromedriver.exe" # 웹드라이버 실행
+driver = webdriver.Chrome(path)
+driver.implicitly_wait(0.5)#암묵적 대기 : 찾으려는 element가 로드될 때까지 지정한 시간만큼 대기할 수 있도록 설정한다
+
+driver.get("https://www.tutorialspoint.com/questions/index/php")
+print("현재 페이지 : "+driver.title)
